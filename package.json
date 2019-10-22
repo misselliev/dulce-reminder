@@ -1,0 +1,41 @@
+{
+  "name": "dulce-reminder",
+  "version": "1.0.0",
+  "description": "Minimalist to-do web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch --progress --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misselliev/dulce-reminder.git"
+  },
+  "keywords": [
+    "todo",
+    "list",
+    "javascript",
+    "web",
+    "app",
+    "ES6"
+  ],
+  "author": "Elizabeth Villalejos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/misselliev/dulce-reminder/issues"
+  },
+  "homepage": "https://github.com/misselliev/dulce-reminder#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
+}
