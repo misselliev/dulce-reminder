@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("document.addEventListener('DOMContentLoaded', function () {\n  var elems = document.querySelectorAll('.sidenav');\n  var instances = M.Sidenav.init(elems, {});\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ })
 

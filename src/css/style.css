@@ -3,3 +3,11 @@ html {
   background: url('https://pbs.twimg.com/media/EB5yIVYWsAAfPgL.jpg') no-repeat;
   background-size: cover;
 }
+
+.white-bg {
+  background: white;
+}
+
+.top {
+  margin-top: 20vh;
+}
