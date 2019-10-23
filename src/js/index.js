@@ -40,7 +40,7 @@ window.onload = function() {
   btn_create.addEventListener('click', storeData);
   btn_clear.addEventListener('click', clearData);
 };
-let counter = 1;
+let counter = 0;
 let todolist = [];
 
 function storeData() {
@@ -48,14 +48,15 @@ function storeData() {
   localStorage.setItem(counter, input);
   console.log('storing your data...');
   todolist.push(input);
+  console.log(todolist);
   displayData(todolist);
   counter += 1;
 }
 
-function displayData(array) {
+function displayData(todolist) {
   console.log('displaying your to-dos...');
   const list = document.getElementById('list-ul');
-  array.forEach((element) => {
+  todolist.forEach((element) => {
     item_list = document.createElement('li');
     item_list.innerText = localStorage.getItem(element);
     list.appendChild(item_list);
@@ -64,5 +65,6 @@ function displayData(array) {
 
 function clearData() {
   console.log('cleaning time!');
+  todolist = [];
   localStorage.clear();
 }
