@@ -7,7 +7,7 @@ window.onload = function() {
   const container = document.getElementById('main');
   const btnCont = Object.assign(
     document.createElement('div'),
-    { className: 'container' },
+    { className: 'container btn-cont' },
     { id: 'btn-container' }
   );
   const btn_create = Object.assign(
@@ -56,11 +56,13 @@ function storeData() {
 function displayData(todolist) {
   console.log('displaying your to-dos...');
   const list = document.getElementById('list-ul');
-  todolist.forEach((element) => {
-    item_list = document.createElement('li');
-    item_list.innerText = localStorage.getItem(element);
-    list.appendChild(item_list);
-  });
+  list.style = 'border: solid 1px pink';
+  for (let i = 0; i < localStorage.length; i++) {
+    let text = localStorage.getItem(i);
+    let item = `<li>${text}</li>`;
+    item.style = 'margin-right: 10px;';
+    list.insertAdjacentHTML('beforeend', item);
+  }
 }
 
 function clearData() {
