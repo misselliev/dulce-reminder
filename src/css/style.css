@@ -1,11 +1,16 @@
 html {
   /* background: url('https://i.pinimg.com/originals/eb/8a/eb/eb8aebe9e2b4c240fe9fb1aeaffc2fed.jpg') no-repeat; */
-  /* background: url('https://pbs.twimg.com/media/EB5yIVYWsAAfPgL.jpg') no-repeat; */
+  background: url('https://pbs.twimg.com/media/EB5yIVYWsAAfPgL.jpg') no-repeat;
   background-size: cover;
 }
 
 .white-bg {
   background: white;
+}
+
+.box-style {
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 .top {

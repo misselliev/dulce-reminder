@@ -29,16 +29,23 @@ window.onload = function() {
     { className: 'container' },
     { id: 'list-container' }
   );
-  const listUl = Object.assign(document.createElement('ul'), { id: 'list-ul' });
+  const listUl = Object.assign(
+    document.createElement('ul'),
+    { id: 'list-ul' },
+    { className: 'white-bg box-style' }
+  );
 
   container.appendChild(btnCont);
   btnCont.appendChild(btn_create);
   btnCont.appendChild(btn_clear);
   container.appendChild(listCont);
   listCont.appendChild(listUl);
-
   btn_create.addEventListener('click', storeData);
   btn_clear.addEventListener('click', clearData);
+  if (localStorage.length > 0) {
+    console.log(localStorage.length);
+    displayData();
+  }
 };
 let counter = 0;
 let todolist = [];
@@ -49,11 +56,11 @@ function storeData() {
   console.log('storing your data...');
   todolist.push(input);
   console.log(todolist);
-  displayData(todolist);
+  displayData();
   counter += 1;
 }
 
-function displayData(todolist) {
+function displayData() {
   console.log('displaying your to-dos...');
   const list = document.getElementById('list-ul');
   list.style = 'border: solid 1px pink';
@@ -69,4 +76,6 @@ function clearData() {
   console.log('cleaning time!');
   todolist = [];
   localStorage.clear();
+  const list = document.getElementById('list-ul');
+  list.style = 'visibility: hidden';
 }
